@@ -47,6 +47,7 @@ O projeto está estruturado em **múltiplas versões**, cada uma explorando abor
 - Confidence scoring
 
 
+### Pré-requisitos
 - **Python 3.8+** instalado
 - **pip** (gerenciador de pacotes Python)
 - **Conta Google** com acesso à API Gemini
