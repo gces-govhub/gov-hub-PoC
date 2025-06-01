@@ -53,11 +53,6 @@ O projeto está estruturado em **múltiplas versões**, cada uma explorando abor
 - **Conta Google** com acesso à API Gemini
 - **Chave da API Google Gemini** ([obter aqui](https://aistudio.google.com/))
 
-### Pré-requisitos Adicionais (para versões futuras):
-- **OpenAI API Key** (para versões com GPT)
-- **Anthropic API Key** (para versões com Claude)
-- **Hugging Face Token** (para modelos open-source)
-
 ## Configuração do Ambiente
 
 ### 1. Clone ou baixe o projeto
