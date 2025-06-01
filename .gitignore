@@ -1,0 +1,277 @@
+# Gov Hub PoC - .gitignore
+
+# ====================================
+# VIRTUAL ENVIRONMENTS
+# ====================================
+gov-hub-env/
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# ====================================
+# PYTHON
+# ====================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# ====================================
+# JUPYTER NOTEBOOK
+# ====================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# ====================================
+# SECURITY & API KEYS
+# ====================================
+# Environment variables
+.env
+.env.local
+.env.*.local
+.envrc
+
+# API Keys (caso alguém crie arquivos separados)
+**/api_keys.*
+**/secrets.*
+config/api_keys.py
+config/secrets.py
+keys/
+credentials/
+
+# ====================================
+# IDE & EDITORS
+# ====================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ====================================
+# OPERATING SYSTEMS
+# ====================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.tmp
+*.temp
+*.TMP
+*.TEMP
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ====================================
+# LOGS & TEMPORARY FILES
+# ====================================
+*.log
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary directories
+tmp/
+temp/
+cache/
+
+# ====================================
+# DATA & OUTPUTS
+# ====================================
+# Data files (caso o projeto gere dados sensíveis)
+data/raw/
+data/processed/
+outputs/
+results/
+
+# Large files
+*.csv
+*.xlsx
+*.json
+*.xml
+*.pdf
+*.docx
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# ====================================
+# DOCKER (caso seja usado no futuro)
+# ====================================
+Dockerfile.local
+docker-compose.override.yml
+.dockerignore
+
+# ====================================
+# CLOUD & DEPLOYMENT
+# ====================================
+# AWS
+.aws/
+
+# Google Cloud
+.gcloudignore
+gcloud-service-key.json
+
+# Heroku
+.heroku/
+
+# ====================================
+# PROJECT SPECIFIC
+# ====================================
+# Pasta de modelos treinados (caso implemente ML)
+models/
+checkpoints/
+
+# Notebooks de teste/desenvolvimento pessoal
+*_test.ipynb
+*_dev.ipynb
+*_scratch.ipynb
+playground/
+experiments/
+
+# Arquivos de configuração local
+config_local.py
+settings_local.py 
