@@ -47,15 +47,11 @@ O projeto está estruturado em **múltiplas versões**, cada uma explorando abor
 - Confidence scoring
 
 
+### Pré-requisitos
 - **Python 3.8+** instalado
 - **pip** (gerenciador de pacotes Python)
 - **Conta Google** com acesso à API Gemini
 - **Chave da API Google Gemini** ([obter aqui](https://aistudio.google.com/))
-
-### Pré-requisitos Adicionais (para versões futuras):
-- **OpenAI API Key** (para versões com GPT)
-- **Anthropic API Key** (para versões com Claude)
-- **Hugging Face Token** (para modelos open-source)
 
 ## Configuração do Ambiente
 
@@ -168,7 +164,6 @@ Cada versão da PoC está em um notebook separado:
 - **`poc_v1.ipynb`** - Versão atual com prompt engineering clássico
 - **`poc_v2.ipynb`** - (Futuro) Chain of Thought
 - **`poc_v3.ipynb`** - (Futuro) Multi-Agent
-- **etc...**
 
 ### Opção 1 - Jupyter Notebook (Recomendado)
 ```bash
@@ -204,8 +199,6 @@ gov-hub-PoC/
 ├── poc_v1.ipynb             # PoC v1 - Prompt Engineering Clássico
 ├── poc_v2.ipynb             # PoC v2 - Chain of Thought (Planejado)
 ├── poc_v3.ipynb             # PoC v3 - Multi-Agent (Planejado)
-├── poc_v4.ipynb             # PoC v4 - Fine-tuning + RAG (Planejado)
-├── poc_v5.ipynb             # PoC v5 - Hybrid Ensemble (Planejado)
 ├── requirements.txt         # Lista de dependências
 ├── .gitignore              # Arquivos a serem ignorados pelo Git
 ├── results/                # Resultados e comparações entre versões
@@ -259,18 +252,6 @@ O projeto demonstra **6 técnicas avançadas** de prompt engineering:
 - **Agente Corretor:** Corrige erros identificados
 - **Orquestrador:** Coordena a comunicação entre agentes
 
-#### Versão 4 - RAG + Fine-tuning
-- **Vector Store:** Base de conhecimento de documentos governamentais
-- **Semantic Search:** Busca por contexto relevante
-- **Fine-tuned Model:** Modelo especializado no domínio
-- **Context Injection:** Injeção de contexto relevante
-
-#### Versão 5 - Ensemble
-- **Model Ensemble:** Combinação de múltiplos modelos
-- **Voting Mechanism:** Sistema de votação para decisões
-- **Confidence Weighting:** Peso baseado na confiança
-- **Fallback Strategy:** Estratégias de recuperação
-
 ## Campos Extraídos
 
 O sistema extrai os seguintes campos de textos governamentais:
@@ -293,18 +274,12 @@ O sistema extrai os seguintes campos de textos governamentais:
 
 ### Fase 2 (Planejada)
 - 🔄 PoC v2 - Chain of Thought Prompting
-- 🔄 Sistema de comparação de resultados
 - 🔄 Métricas de avaliação
 
 ### Fase 3 (Planejada)
 - 📋 PoC v3 - Multi-Agent Approach
-- 📋 PoC v4 - RAG + Fine-tuning
-- 📋 Dashboard de comparação
+- 📋 Relatório de comparação
 
-### Fase 4 (Planejada)
-- 📋 PoC v5 - Hybrid Ensemble
-- 📋 Análise estatística comparativa
-- 📋 Recomendações de uso
 
 ## Troubleshooting
 
