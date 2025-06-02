@@ -9,25 +9,32 @@ numpy>=1.21.0
 pandas>=1.3.0
 
 # ====================================
-# PoC v1 - PROMPT ENGINEERING CLÁSSICO
+# PoC v1 - PROMPT ENGINEERING CLÁSSICO ✅ IMPLEMENTADO
 # ====================================
 google-generativeai>=0.8.0
 
 # ====================================
-# PoC v2 - CHAIN OF THOUGHT + REASONING
+# PoC v2 - CHAIN OF THOUGHT + REASONING ✅ IMPLEMENTADO
 # ====================================
-# openai>=1.0.0                    # Para GPT models (opcional)
-# anthropic>=0.8.0                 # Para Claude models (opcional)
+# Utiliza as mesmas dependências da v1:
+# - google-generativeai (para Gemini API)
+# - re (built-in Python)
+# - json (built-in Python)
+# - collections (built-in Python)
+
+# Para versões futuras com outros provedores (opcional):
+# openai>=1.0.0                    # Para GPT models
+# anthropic>=0.8.0                 # Para Claude models
 
 # ====================================
-# PoC v3 - MULTI-AGENT APPROACH
+# PoC v3 - MULTI-AGENT APPROACH (PLANEJADO)
 # ====================================
 # langchain>=0.1.0                 # Framework para agentes
 # langchain-community>=0.0.10      # Conectores adicionais
 # langchain-experimental>=0.0.10   # Recursos experimentais
 
 # ====================================
-# PoC v4 - FINE-TUNING + RAG
+# PoC v4 - FINE-TUNING + RAG (PLANEJADO)
 # ====================================
 # transformers>=4.35.0             # Hugging Face transformers
 # torch>=2.0.0                     # PyTorch para fine-tuning
@@ -36,20 +43,20 @@ google-generativeai>=0.8.0
 # faiss-cpu>=1.7.0                 # Facebook AI Similarity Search
 
 # ====================================
-# PoC v5 - HYBRID ENSEMBLE
+# PoC v5 - HYBRID ENSEMBLE (PLANEJADO)
 # ====================================
 # scikit-learn>=1.3.0              # Para voting classifiers
 # scipy>=1.10.0                    # Operações matemáticas avançadas
 
 # ====================================
-# ANÁLISE E VISUALIZAÇÃO
+# ANÁLISE E VISUALIZAÇÃO (FUTURO)
 # ====================================
 # matplotlib>=3.6.0                # Gráficos e visualizações
 # seaborn>=0.12.0                  # Visualizações estatísticas
 # plotly>=5.15.0                   # Gráficos interativos
 
 # ====================================
-# MÉTRICAS E AVALIAÇÃO
+# MÉTRICAS E AVALIAÇÃO (FUTURO)
 # ====================================
 # datasets>=2.14.0                 # Para datasets de benchmark
 # evaluate>=0.4.0                  # Métricas de avaliação
@@ -57,7 +64,7 @@ google-generativeai>=0.8.0
 # bert-score>=0.3.13               # Métricas BERT Score
 
 # ====================================
-# UTILITÁRIOS ADICIONAIS
+# UTILITÁRIOS ADICIONAIS (FUTURO)
 # ====================================
 # python-dotenv>=1.0.0             # Gerenciamento de variáveis ambiente
 # tqdm>=4.65.0                     # Barras de progresso
@@ -68,15 +75,23 @@ google-generativeai>=0.8.0
 # ====================================
 # INSTRUÇÕES DE INSTALAÇÃO
 # ====================================
-# Para instalar apenas as dependências base:
+# Para executar v1 e v2 (mínimo necessário):
+# pip install jupyter ipykernel google-generativeai
+
+# Para instalar apenas as dependências base implementadas:
 # pip install jupyter ipykernel numpy pandas google-generativeai
 #
-# Para instalar tudo (descomente as linhas acima):
-# pip install -r requirements.txt
-#
 # Para versões específicas:
-# v1: pip install google-generativeai jupyter ipykernel
-# v2: pip install openai anthropic
-# v3: pip install langchain langchain-community langchain-experimental
-# v4: pip install transformers torch sentence-transformers chromadb
-# v5: pip install scikit-learn scipy 
+# v1 + v2: pip install google-generativeai jupyter ipykernel
+# v3 (futuro): pip install langchain langchain-community langchain-experimental
+# v4 (futuro): pip install transformers torch sentence-transformers chromadb
+# v5 (futuro): pip install scikit-learn scipy
+
+# ====================================
+# STATUS DE IMPLEMENTAÇÃO
+# ====================================
+# ✅ v1 - Prompt Engineering Clássico (Implementado)
+# ✅ v2 - Chain of Thought + Reasoning (Implementado)
+# 📋 v3 - Multi-Agent Approach (Planejado)
+# 📋 v4 - Fine-tuning + RAG (Planejado)
+# 📋 v5 - Hybrid Ensemble (Planejado) 

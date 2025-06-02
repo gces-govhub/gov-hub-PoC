@@ -17,7 +17,7 @@ O projeto está estruturado em **múltiplas versões**, cada uma explorando abor
 
 ## Versões Disponíveis
 
-### PoC v1 - Prompt Engineering Clássico (Google Gemini 2.5 Flash)
+### PoC v1 - Prompt Engineering Clássico (Google Gemini 2.5 Flash) ✅ **Implementado**
 **Arquivo:** `poc_v1.ipynb`
 
 **Técnicas implementadas:**
@@ -28,14 +28,27 @@ O projeto está estruturado em **múltiplas versões**, cada uma explorando abor
 - Uso de Delimitadores
 - Preparar a Saída (Prefilling)
 
-### PoC v2 - Chain of Thought + Reasoning (Planejado)
+**Características:**
+- Abordagem direta e rápida
+- Ideal para prototipagem e casos simples
+- Baixo custo computacional
+- Resultado único por execução
+
+### PoC v2 - Chain of Thought + Reasoning ✅ **Implementado**
 **Arquivo:** `poc_v2.ipynb`
 
-**Técnicas a implementar:**
+**Técnicas implementadas:**
 - Chain of Thought (CoT) Prompting
-- Step-by-step reasoning
-- Self-consistency decoding
-- Validation prompts
+- Step-by-Step Reasoning
+- Self-Consistency Decoding
+- Validation Prompts
+
+**Características:**
+- Pipeline robusto com múltiplas camadas de verificação
+- Raciocínio explícito e transparente
+- Sistema de validação automatizada
+- Maior confiabilidade através de consenso
+- Ideal para documentos críticos
 
 ### PoC v3 - Multi-Agent Approach (Planejado)
 **Arquivo:** `poc_v3.ipynb`
@@ -46,6 +59,62 @@ O projeto está estruturado em **múltiplas versões**, cada uma explorando abor
 - Error detection and correction
 - Confidence scoring
 
+## Comparação entre PoCs
+
+### Tabela Comparativa
+
+| **Aspecto** | **PoC v1** | **PoC v2** | **PoC v3** |
+|-------------|------------|------------|------------|
+| **Status** | ✅ Implementado | ✅ Implementado | 📋 Planejado |
+| **Complexidade** | Baixa | Alta | Muito Alta |
+| **Transparência** | Baixa | Alta | Muito Alta |
+| **Robustez** | Moderada | Alta | Muito Alta |
+| **Validação** | Manual | Automatizada | Multi-layer |
+| **Custo** | Baixo | Moderado | Alto |
+| **Velocidade** | Rápida | Moderada | Lenta |
+| **Precisão** | Boa | Muito Boa | Excelente |
+| **Casos de Uso** | Prototipagem rápida | Documentos críticos | Produção enterprise |
+
+### Análise Detalhada
+
+#### **PoC v1 - Prompt Engineering Clássico**
+**Quando usar:**
+- Prototipagem rápida
+- Textos simples e diretos
+- Casos onde velocidade é prioridade
+- Recursos limitados
+
+**Vantagens:**
+- Implementação simples
+- Execução rápida
+- Baixo custo
+- Fácil de entender
+
+⚠️ **Limitações:**
+- Sem verificação de qualidade
+- Resultado único (sem redundância)
+- Dependente da qualidade do prompt
+- Menos robusto para casos complexos
+
+#### **PoC v2 - Chain of Thought + Reasoning**
+**Quando usar:**
+- Documentos governamentais críticos
+- Necessidade de auditoria
+- Casos onde precisão máxima é necessária
+- Ambientes onde transparência é importante
+
+**Vantagens:**
+- Raciocínio explícito e auditável
+- Sistema de validação automática
+- Múltiplas execuções para robustez
+- Detecção automática de erros
+- Feedback específico para melhorias
+
+⚠️ **Limitações:**
+- Maior complexidade de implementação
+- Custo mais alto (múltiplas chamadas à API)
+- Execução mais lenta
+- Requer mais recursos computacionais
 
 ### Pré-requisitos
 - **Python 3.8+** instalado
@@ -136,7 +205,7 @@ pip list
 
 ## Configuração da API
 
-### 1. Obter Chave da API Gemini
+### 1. Obter Chave da API Gemini | Disponível nos notebooks enquanto durar as PoCs
 1. Acesse [Google AI Studio](https://aistudio.google.com/)
 2. Faça login com sua conta Google
 3. Crie uma nova API key
@@ -196,8 +265,8 @@ jupyter lab
 ```
 gov-hub-PoC/
 ├── README.md                 # Este arquivo
-├── poc_v1.ipynb             # PoC v1 - Prompt Engineering Clássico
-├── poc_v2.ipynb             # PoC v2 - Chain of Thought (Planejado)
+├── poc_v1.ipynb             # PoC v1 - Prompt Engineering Clássico ✅
+├── poc_v2.ipynb             # PoC v2 - Chain of Thought + Reasoning ✅
 ├── poc_v3.ipynb             # PoC v3 - Multi-Agent (Planejado)
 ├── requirements.txt         # Lista de dependências
 ├── .gitignore              # Arquivos a serem ignorados pelo Git
@@ -210,7 +279,7 @@ gov-hub-PoC/
 
 ## Técnicas de IA e Prompt Engineering por Versão
 
-### Versão 1 - Prompt Engineering Clássico
+### Versão 1 - Prompt Engineering Clássico ✅
 O projeto demonstra **6 técnicas avançadas** de prompt engineering:
 
 #### 1. Definição Clara de Papel (Role-Playing)
@@ -238,13 +307,30 @@ O projeto demonstra **6 técnicas avançadas** de prompt engineering:
 - Inicia a resposta com formato esperado
 - Guia o modelo para seguir o padrão correto
 
-### Versões Futuras - Técnicas Planejadas
+### Versão 2 - Chain of Thought + Reasoning ✅
+O projeto implementa **4 técnicas avançadas** de prompt engineering:
 
-#### Versão 2 - Chain of Thought
-- **CoT Prompting:** Força o modelo a mostrar seu raciocínio
-- **Step-by-step reasoning:** Decomposição do problema em etapas
-- **Self-consistency:** Múltiplas execuções para validação
-- **Meta-prompting:** Prompts que geram prompts
+#### 1. Chain of Thought (CoT) Prompting
+- **Conceito:** Força o modelo a explicitar seu raciocínio passo a passo
+- **Implementação:** Divisão em duas etapas (raciocínio + JSON)
+- **Benefício:** Maior precisão e transparência, reduz alucinações
+
+#### 2. Step-by-Step Reasoning
+- **Conceito:** Decomposição do problema em etapas menores
+- **Implementação:** Análise campo por campo com justificativas
+- **Benefício:** Facilita debugging e validação
+
+#### 3. Self-Consistency Decoding
+- **Conceito:** Múltiplas respostas independentes com votação majoritária
+- **Implementação:** 3 execuções com temperatura 0.5, consenso por campo
+- **Benefício:** Maior robustez contra erros aleatórios
+
+#### 4. Validation Prompts
+- **Conceito:** Auditoria independente dos resultados
+- **Implementação:** Prompt especializado que compara texto original vs JSON extraído
+- **Benefício:** Detecção automática de erros com feedback específico
+
+### Versões Futuras - Técnicas Planejadas
 
 #### Versão 3 - Multi-Agent
 - **Agente Extrator:** Especializado em encontrar informações
@@ -267,19 +353,19 @@ O sistema extrai os seguintes campos de textos governamentais:
 
 ## Roadmap de Desenvolvimento
 
-### Fase 1 (Concluída)
+### Fase 1 ✅ **Concluída**
 - ✅ PoC v1 - Prompt Engineering Clássico
 - ✅ Estrutura base do projeto
-- ✅ Documentação inicial
+- ✅ Documentação completa
 
-### Fase 2 (Planejada)
-- 🔄 PoC v2 - Chain of Thought Prompting
-- 🔄 Métricas de avaliação
+### Fase 2 📋 **Planejada**
+- ✅ PoC v2 - Chain of Thought + Reasoning
+- ✅ Análise comparativa entre v1 e v2
 
-### Fase 3 (Planejada)
+
+### Fase 3 📋 **Planejada**
 - 📋 PoC v3 - Multi-Agent Approach
-- 📋 Relatório de comparação
-
+- 📋 Relatório final de comparação
 
 ## Troubleshooting
 
